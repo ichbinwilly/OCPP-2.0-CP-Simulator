@@ -187,6 +187,10 @@
 
 						if (c == 1) {
 							var hb_interval = handleData(ddata);
+							if(hb_interval === 0)
+							{
+								hb_interval = (Math.random() * 10);
+							}
 							sessionStorage.setItem("Confriguration", hb_interval);
 							startHB(hb_interval * 1000);
 						}
